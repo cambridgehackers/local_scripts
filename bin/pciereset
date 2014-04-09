@@ -1,6 +1,6 @@
 #
 set -x
 set -e
-~jca/s/git/xbsv/scripts/power.py pciepower pset 1 0
+power.py pciepower pset 1 0
 sleep 2
-~jca/s/git/xbsv/scripts/power.py pciepower pset 1 1
+power.py pciepower pset 1 1
