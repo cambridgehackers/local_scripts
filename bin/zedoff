@@ -1,0 +1,6 @@
+#
+set -x
+set -e
+~jca/s/git/xbsv/scripts/power.py zedpower pset 2 0
+#sleep 2
+#~jca/s/git/xbsv/scripts/power.py zedpower pset 2 1
