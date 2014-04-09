@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+set -x
+
+ssh -p 8000 localhost "usbreset /dev/bus/usb/003/005"
