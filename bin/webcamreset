@@ -2,4 +2,8 @@
 set -e
 set -x
 
-ssh -p 8000 localhost "usbreset /dev/bus/usb/003/005"
+if [ "$CAMPARAM" == "" ]; then
+    CAMPARAM="-p 8000 localhost"
+fi
+# uses usbreset from cambridgehackers/system-tools/usbreset
+ssh $CAMPARAM "usbreset /dev/bus/usb/003/005"
