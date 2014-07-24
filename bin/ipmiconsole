@@ -2,4 +2,12 @@
 
 host=$1
 
+if [ "$host" == "" ]; then
+   echo "Usage: $0 <hostname>"
+   echo
+   echo "Connect to console on host via ipmi"
+   echo "    ~. to disconnect (or ~~. to disconnect console without disconnecting ssh)"
+   echo -1
+fi
+
 ipmitool -H$host-bmc -Uroot -Pchangeme -Ilanplus sol activate
