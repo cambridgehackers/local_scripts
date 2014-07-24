@@ -1,0 +1,14 @@
+#!/bin/sh
+
+host=$1
+cmd=$2
+
+if [ "$host" == "" ] ; then
+   echo "Usage: $0 <host> (on|off|status|reset|cycle)"
+   echo
+   echo " Control chassis power on hostname via ipmi"
+   exit -1
+fi
+
+ipmitool -H$host-bmc -Uroot -Pchangeme -Ilanplus chassis power $cmd
+
