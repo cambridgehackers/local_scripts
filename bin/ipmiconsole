@@ -1,0 +1,5 @@
+#!/bin/sh
+
+host=$1
+
+ipmitool -H$host-bmc -Uroot -Pchangeme -Ilanplus sol activate
