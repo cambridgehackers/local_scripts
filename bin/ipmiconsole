@@ -7,7 +7,7 @@ if [ "$host" == "" ]; then
    echo
    echo "Connect to console on host via ipmi"
    echo "    ~. to disconnect (or ~~. to disconnect console without disconnecting ssh)"
-   echo -1
+   exit -1
 fi
 
 ipmitool -H$host-bmc -Uroot -Pchangeme -Ilanplus sol activate
