@@ -1,0 +1,5 @@
+#!/bin/sh
+
+source /scratch/buildbot/sandbox/bin/activate
+
+buildbot try -c pb -m sj9:5555 --user=xbsv --passwd=xbsv --vc=git --branch=origin/master $*
