@@ -5,7 +5,7 @@
 #     'zc706': 2
 # }
 
-zedport = 1
+zedport=1
 set -x
 set -e
 power.py zedpower pset $zedport 0
